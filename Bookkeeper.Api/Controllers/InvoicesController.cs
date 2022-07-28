@@ -6,5 +6,9 @@ namespace Bookkeeper.Api.Controllers;
 [Route("[controller]")]
 public class InvoicesController : ControllerBase
 {
-
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetId([FromRoute]int id)
+    {
+        return Ok(id);
+    }
 }
